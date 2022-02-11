@@ -1,0 +1,6 @@
+let blue=<206,80,100>
+CenterCirc(cx:25,cy:110,r:150,fill:blue)
+
+let yellow=<51,54,100>
+CenterCirc(cx:25,cy:25,r:30,fill:yellow)
+Rect(x:0,y:75,w:50,h:150,fill:yellow)

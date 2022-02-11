@@ -1,0 +1,16 @@
+#!/bin/bash
+END="\033[0m"
+RED="\033[0;31m"
+
+echo $PATH | grep "node_modules/.bin"
+[ $? == 0 ] || export PATH="$PATH:node_modules/.bin"
+
+pushd tree-sitter-xochitl > /dev/null
+tree-sitter generate
+if [ $? == 0 ]; then
+  node-gyp rebuild --silent > /dev/null
+  [ $? == 0 ] || echo -e "${RED}ERROR${END} node-gyp"
+else
+  echo -e "${RED}ERROR${END} tree-sitter"
+fi
+popd > /dev/null

@@ -1,0 +1,31 @@
+@import pill
+let dark=<24,59.8,51.8>
+let coffee=<24,59,71.8>
+let tan=<25,7.8,95.7>
+let blue=<227,50,87.8>
+
+
+Padding(x:89,y:164,w:292,h:255)
+Path(stroke:dark,fill:-1,z:11,sw:8) -> head
+Path head(fill:coffee,points:<
+	<100,315>,<190,250>,
+  <235,175>,<280,250>,
+  <370,315>>,edges:<
+  <5,-25,-50,15>,<5,-25,-15,0>,
+  <15,0,-5,-25>,<50,15,-5,-25>,
+  <-25,125,25,125>
+>)
+
+Pill eye(x:190,y:280,r:10,diff:20,fill:dark)
+Pill(x:260) -> eye
+
+Path mouth(fill:tan,points:<
+	<100,315>,<370,315>
+>,edges:<
+	<70,60,-70,60>,<-25,125,25,125>
+>)
+Pill center(x:221,y:363,r:14,diff:10,fill:coffee)
+Pill outer(x:142,y:350,r:8,diff:4) -> center
+Pill mid(x:171,y:360,r:12,diff:7) -> center
+Pill(x:315) -> outer
+Pill(x:275) -> mid

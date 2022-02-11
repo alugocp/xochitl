@@ -1,0 +1,20 @@
+~/ comment /~
+~ another comment
+
+Circle(
+  x:100,
+  y:35,
+  r:25
+)
+
+def Square(x,y,l)(
+  Rect r(x:x,y:y,w:l,h:l)
+)
+
+meta whatsup(
+	Rect(x:0,y:0,h:50,w:50)
+)
+@whatsup
+
+Square s(x:50,y:250,l:50)
+@mixin ../src/hello

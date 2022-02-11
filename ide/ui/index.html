@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="codemirror-5.40.0/lib/codemirror.js"></script>
+  <script src="codemirror-addons/simple.js"></script>
+  <link rel="stylesheet" href="codemirror-5.40.0/lib/codemirror.css">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+  <textarea id="editor"></textarea>
+  <div class="svg" id="svg"></div>
+</body>
+<script src="xochitl-mode.js"></script>
+<script>
+  var editor=CodeMirror.fromTextArea(document.getElementById("editor"),{
+    lineNumbers:true,
+    mode:"xochitl",
+    tabSize:2
+  });
+</script>
+</html>

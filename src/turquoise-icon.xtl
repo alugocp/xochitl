@@ -1,0 +1,6 @@
+~ Pretty simple but whatever
+Padding(x:-25,w:200,y:0,h:0)
+Oval(x:0,y:0,w:150,h:200,fill:<178.8,88,75>)
+Rect(x:62.5,w:25,h:100) -> top
+Rect top(x:25,w:100,h:25,y:50,
+	fill:<0,0,98>,r:12.5)

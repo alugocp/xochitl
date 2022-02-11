@@ -1,0 +1,17 @@
+~ Badge
+let border=<230,40,100>
+CenterCirc rim(cx:500,cy:500,r:100,fill:border)
+CenterCirc(r:90,fill:<230,2,100>) -> rim
+
+~ Papers
+let offset=4
+let secondary=<230,10,80>
+Rect back(x:455+offset,y:445-offset,w:90,h:110,r:20,
+	fill:secondary)
+Rect(x:455-offset,y:445+offset,fill:border) -> back
+
+~ Lines
+Rect first(x:461,y:469,w:70,h:10,fill:secondary)
+Rect(y:489) -> first
+Rect(y:509) -> first
+Rect(y:529,w:45) -> first

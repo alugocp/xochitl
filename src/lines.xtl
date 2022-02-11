@@ -1,0 +1,7 @@
+
+~ Nike
+let radius=125
+Circle(x:50,y:25,r:125,fill:<0,0,15>)
+Segment(sw:10,stroke:<0,0,75>,
+	points:<<100,150>,<150,200>,<250,100>>
+)

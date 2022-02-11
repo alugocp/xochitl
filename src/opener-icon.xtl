@@ -1,0 +1,5 @@
+let hue=360*0.8063
+CenterCirc outer(cx:500,cy:500,r:200,
+	fill:<hue,91.43,68.63>)
+CenterCirc(r:150,fill:<hue,50,90>) -> outer
+CenterCirc(r:100,fill:<0,0,100>) -> outer

@@ -1,0 +1,12 @@
+def Hexagon(cx,cy,r,fill:<0,0,0>,stroke:<0,0,0>,sw:0,z:10)(
+	let sqrt3=1.732
+  let d3=r*sqrt3/2
+  let d2=r/2
+	Polygon(
+  	fill:fill,stroke:stroke,sw:sw,z:z,
+  	points:<
+    	<cx,cy-r>,<cx+d3,cy-d2>,<cx+d3,cy+d2>,
+      <cx,cy+r>,<cx-d3,cy+d2>,<cx-d3,cy-d2>
+    >
+  )
+)

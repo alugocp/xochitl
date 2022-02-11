@@ -1,0 +1,9 @@
+
+
+StoneHedge(x:50,y:50,width:75,height:60,thick:20)
+
+def StoneHedge(x,y,width,height,thick)(
+	Rect(x:x,y:y,w:width,h:thick)
+  Rect(x:x+10,y:y+thick,w:thick,h:height-thick)
+  Rect(x:x+width-thick-10,y:y+thick,w:thick,h:height-thick)
+)

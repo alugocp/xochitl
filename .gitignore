@@ -1,0 +1,3 @@
+tree-sitter-xochitl/build
+ide/ui/codemirror-*
+node_modules

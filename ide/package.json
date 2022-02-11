@@ -1,0 +1,14 @@
+{
+  "name": "xochitl-ide",
+  "version": "0.9.5",
+  "description": "The official IDE for the Xochitl programming language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Lugo",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.11"
+  }
+}

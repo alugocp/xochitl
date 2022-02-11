@@ -1,0 +1,50 @@
+~ Hair
+def Symmetric(cx,cy,offset,radius:10,fill:<0,0,0>,z:11)(
+	Circle left(
+  	x:cx-offset-radius,y:cy-radius,
+    fill:fill,r:radius,z:z
+  )
+  Circle(x:cx+offset-radius) -> left
+)
+def Hair(fill)(
+	let mid=175
+	let r=15
+	Oval(w:150,h:100,x:face.x,y:face.y-50,fill:fill,z:9)
+	Circle prime(r:r,fill:fill,z:11,x:175-r,y:95)
+  Symmetric bangs(
+  	cx:mid,cy:100,offset:22.5,
+    radius:r,fill:fill
+  )
+  Symmetric(cy:90,offset:49) -> bangs
+  Symmetric(cy:123,offset:72,z:9) -> bangs
+  Symmetric(cy:105,offset:75) -> bangs
+  Symmetric(cy:85,offset:72) -> bangs
+  Symmetric(cy:70,offset:62) -> bangs
+  Symmetric(cy:62,offset:50) -> bangs
+  Symmetric(cy:57,offset:35) -> bangs
+  Symmetric(cy:53,offset:20) -> bangs
+  Circle(y:35) -> prime
+)
+Hair(fill:<0,0,22>)
+
+~ Head
+let skin=<31,65,80>
+Circle chin(r:75,x:face.x,y:face.y,fill:skin)
+Rect face(x:100,y:100,w:150,h:75,fill:skin)
+
+~ Ears
+Circle ear(r:20,x:face.x-20,y:face.y+30) -> face
+Circle		(x:face.x+130) -> ear
+
+~ Eyes
+Circle eye(r:15,x:face.x+15,y:face.y+25,fill:<31,30,30>)
+Circle		(x:face.x+105) -> eye
+
+~ Mouth
+let p=<<120,175>,<230,175>,<175,230>>
+let d=30
+~Path(x:p<0><0>,y:p<0><1>,fill:<0,0,22>,points:<
+~	<p<1><0>,p<1><1>>,
+~  <p<2><0>,p<2><1>,p<2><0>+d,p<2><1>,p<1><0>,p<1><1>+d>,
+~  <p<0><0>,p<0><1>,p<0><0>,p<0><1>+d,p<2><0>-d,p<2><1>>
+~>)

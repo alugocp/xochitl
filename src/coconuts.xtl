@@ -1,0 +1,24 @@
+~ Let's draw some coconuts
+
+def Coconut(x,y)(
+	let color=<0,0,22>
+	Circle(x:x,y:y,r:50,sw:8,
+  	fill:<30,66.7,60>,
+    stroke:color
+  )
+  Circle(x:x+50-dots,y:y+70) -> left
+  Circle(x:left.x+50) -> left
+  let dots=10
+  Circle left(
+  	fill:color,
+  	x:x+25-dots,
+    y:y+30,
+    r:dots
+  )
+)
+
+Coconut(x: 50,y:50 )
+Coconut(x:200,y:50 )
+Coconut(x: 50,y:200)
+Coconut(x:200,y:200)
+Padding(w:400,h:400)

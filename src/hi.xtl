@@ -1,0 +1,11 @@
+
+Rect(x:0,y:(h-w)/2,h:w,w:w*3)
+Rect l(x:0,y:0,w:w,h:h)
+Rect(x:w*2) -> l
+
+Rect i(x:w*4,w:w,y:w+m,h:h-w-m)
+~Circ(r:w/2) -> l
+
+let w=60
+let h=300
+let m=5
